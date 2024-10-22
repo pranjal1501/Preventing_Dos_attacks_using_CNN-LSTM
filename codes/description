@@ -7,4 +7,7 @@ This script calculates the mean values of selected attributes from the dataset. 
 plot_graphs:
 This script generates visual representations of network traffic attributes. You can customize the number of data points to visualize, making it easier to see how different features change between normal and DoS attack scenarios. The graphs provide a clear comparison of the values and behavior of different traffic attributes.
 
+extract_data_from_wireshark_csvfile:
+This script processes the packet data extracted from Wireshark and converts it into a format compatible with the dataset used to train the CNN-LSTM model. The conversion ensures that the data fields from Wireshark, such as source and destination bytes, flags, and error rates, align with the predefined structure of the model's dataset, facilitating seamless analysis and attack detection. This step is crucial for testing real-time network traffic against the trained model.
+
 These files play an essential role in preprocessing, statistical analysis, and visualization, contributing to both training and evaluating the CNN-LSTM model for DoS attack detection.
