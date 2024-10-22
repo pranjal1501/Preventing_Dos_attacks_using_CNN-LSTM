@@ -1,0 +1,10 @@
+,Normal (10000 Sample),DoS Attack (10000 Sample)
+serror_rate,0.019468,0.751094
+srv_serror_rate,0.017885,0.749701
+src_bytes,1.35E-05,7.96E-07
+dst_bytes,3.37E-06,1.20E-07
+rerror_rate,0.098998,0.149137
+srv_rerror_rate,0.099931,0.150051
+count,0.059363014,0.349234834
+srv_count,0.049260665,0.063877691
+same_srv_rate,0.932395,0.192348
