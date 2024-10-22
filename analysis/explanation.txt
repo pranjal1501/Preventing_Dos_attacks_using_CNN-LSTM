@@ -1,3 +1,5 @@
+THESE VALUES WERE ABTAINED FROM RUNNING "mean_analysis" SCRIPT INSIDE CODES FOLDER
+
 1. SYN Error Rate (serror_rate):
 Normal: 0.019468
 DoS Attack: 0.751094
