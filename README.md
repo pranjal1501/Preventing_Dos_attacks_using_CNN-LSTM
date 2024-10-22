@@ -10,10 +10,16 @@ How to Test:
 Use Wireshark to capture network packets.
 Run the trained CNN-LSTM model to analyze the captured data.
 
-Folders:
-codes/: Contains scripts for preprocessing dataset,analysis and visualization.
-analysis/: Holds analysis scripts for performance metrics.
-plots/: Includes visualizations of all attributes.
+Folder Structure
+codes/: Contains the Python scripts for training, preprocessing, and testing the model.
+dataset/: Includes sample datasets in text and CSV formats.
+analysis/: Scripts for feature extraction, calculating mean values, and plotting traffic patterns.
+
+Main Scripts
+preprocess_dataset_create_csv_from_text: Converts raw text data to CSV format and applies MinMax normalization for 39 attributes to standardize data.
+extract_data_from_wireshark_csvfile: Prepares Wireshark-captured packet data by formatting it to align with the training dataset.
+mean_analysis: Computes the mean of specific attributes (customizable) over random data points for statistical analysis.
+plot_graphs: Visualizes selected traffic attributes, allowing for the comparison between normal and attack traffic.
 
 DATASET LINK:  https://www.kaggle.com/datasets/hassan06/nslkdd/data
 SOURCE: Kaggle
