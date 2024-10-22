@@ -1,0 +1,52 @@
+1. SYN Error Rate (serror_rate):
+Normal: 0.019468
+DoS Attack: 0.751094
+Explanation: The low serror_rate in normal traffic indicates successful connection attempts, as SYN packets receive the expected ACK response. In contrast, during DoS attacks like SYN floods, numerous SYN packets are sent without completing the handshake, resulting in a significantly higher serror_rate due to failed connections.
+
+
+2. Server SYN Error Rate (srv_serror_rate):
+Normal: 0.017885
+DoS Attack: 0.749701
+Explanation: Under normal conditions, servers handle connections efficiently, maintaining low error rates. During DoS attacks, a surge of incomplete connection requests leads to a higher srv_serror_rate, reflecting congestion and failed connection attempts.
+
+
+3. Bytes Sent from Source (src_bytes):
+Normal: 1.35E-05
+DoS Attack: 7.96E-07
+Explanation: Normal traffic involves substantial data transfer, whereas in DoS attacks, attackers send minimal data to overwhelm the server with numerous small requests. This results in a lower average src_bytes during attacks.
+
+
+4. Bytes Sent from Destination (dst_bytes):
+Normal: 3.37E-06
+DoS Attack: 1.20E-07
+Explanation: Normally, servers respond with larger data volumes after receiving requests. In DoS attacks, servers either do not respond or send minimal data, leading to a significantly reduced dst_bytes.
+
+
+5. REJ Error Rate (rerror_rate):
+Normal: 0.098998
+DoS Attack: 0.149137
+Explanation: The rerror_rate reflects rejected connections, which are common in normal traffic. During DoS attacks, increased rejection of invalid requests results in a higher rerror_rate.
+
+
+6. Server REJ Error Rate (srv_rerror_rate):
+Normal: 0.099931
+DoS Attack: 0.150051
+Explanation: Similar to rerror_rate, the srv_rerror_rate increases during DoS attacks due to an influx of invalid requests overwhelming server capacity.
+
+
+7. Number of Connections to the Same Host (count):
+Normal: 0.059363014
+DoS Attack: 0.349234834
+Explanation: Normal user interactions result in low connection counts. In contrast, DoS attacks target the same host repeatedly, significantly increasing the connection count.
+
+
+8. Number of Connections to the Same Service (srv_count):
+Normal: 0.049260665
+DoS Attack: 0.063877691
+Explanation: Normal traffic shows stable srv_count. While there may be a slight increase during DoS attacks, it is less pronounced since multiple services are often targeted simultaneously.
+
+
+9. Percentage of Connections to the Same Service (same_srv_rate):
+Normal: 0.932395
+DoS Attack: 0.192348
+Explanation: Normal users typically connect to a few consistent services, resulting in a high same_srv_rate. DoS attacks, however, distribute connections across various services, leading to a significantly lower same_srv_rate.
